@@ -55,21 +55,39 @@
             margin-top: 20px;
             text-align: center;
         }
+        section img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .movie-poster {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
 
 <header>
-	<div class="container">
-		<h1>Les Films Star Wars</h1>
-	</div>
+    <div class="container">
+        <h1>Les Films Star Wars</h1>
+    </div>
 </header>
 
 <section>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Star Wars Logo">
 </section>
 
-<section>
+<section class="main">
     <h2>Les Trilogies</h2>
     <ul>
         <li>
@@ -131,4 +149,3 @@
 
 </body>
 </html>
-

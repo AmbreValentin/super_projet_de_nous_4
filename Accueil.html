@@ -7,13 +7,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            background: url('https://cdn.wallpapersafari.com/95/71/lXqpEv.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
             padding: 1em 0;
         }
@@ -34,6 +35,35 @@
             background-color: #333;
             color: white;
         }
+        .crawl {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: justify;
+            position: relative;
+            top: 100px;
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            height: 300px;
+            perspective: 400px;
+        }
+        .crawl p {
+            font-size: 20px;
+            color: yellow;
+            animation: crawl 60s linear infinite;
+            position: absolute;
+            width: 100%;
+            transform-origin: 50% 100%;
+        }
+        @keyframes crawl {
+            0% {
+                top: 100%;
+                transform: rotateX(20deg)  translateZ(0);
+            }
+            100% {
+                top: -300%;
+                transform: rotateX(20deg) translateZ(-1000px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -45,5 +75,12 @@
         <a href="Film.html">Films</a>
         <a href="Univers.html">Univers</a>
     </nav>
+    <div class="crawl">
+        <p>
+            Il y a bien longtemps, dans une galaxie lointaine, très lointaine....<br><br>
+            Ceci est un exemple de texte déroulant, inspiré de l'introduction des films Star Wars.<br><br>
+            Vous pouvez personnaliser ce texte pour raconter une histoire ou fournir des informations sur votre site.
+        </p>
+    </div>
 </body>
 </html>

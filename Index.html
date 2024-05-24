@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Ajout de la feuille de style externe -->
+</head>
+<body>
+    <header>
+        <h1>Que la force soit avec vous !</h1>
+    </header>
+    <nav>
+        <a href="Personnage.html">Personnages</a>
+        <a href="Film.html">Films</a>
+        <a href="Univers.html">Univers</a>
+    </nav>
+    <div class="crawl">
+        <p>
+            Il y a bien longtemps, dans une galaxie lointaine, très lointaine, un groupe de Padawans, Lise, Emmanuelle, Martin et Ambre, créaient un ensemble de pages html reiées entre elles pour explorer la licence Star Wars.<br><br>
+            Dans leurs quête épique à travers l'univers, ils pouvaient compter sur maître Github et le jedi Pierre Raimbaud. <br><br>
+        </p>
+    </div>
+	<script>
+		// Au clic sur un lien, ajoutez une classe pour déclencher la transition
+		document.querySelectorAll('nav a').forEach(link => {
+			link.addEventListener('click', function(event) {
+				event.preventDefault(); // Empêcher le comportement par défaut du lien
+				const href = this.getAttribute('href');
+				const transitionContainer = document.createElement('div');
+				transitionContainer.classList.add('transition-container');
+				document.body.appendChild(transitionContainer);
+				setTimeout(() => {
+					window.location.href = href; // Rediriger vers la nouvelle page après l'animation
+				}, 2000); // Correspond à la durée de l'animation
+			});
+		});
+	</script>
+
+</body>
+</html>

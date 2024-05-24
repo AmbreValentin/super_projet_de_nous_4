@@ -20,7 +20,7 @@ nav a {
 
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('fonts/MyCustomFont.ttf') format('truetype'); /* Correction du format de police */
+    src: url('fonts/MyCustomFont.ttf') format('.ttf'); /* Correction du format de police */
     font-weight: normal;
     font-style: normal;
 }

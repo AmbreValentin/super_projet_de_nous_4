@@ -64,7 +64,8 @@
             height: auto;
         }
 		#jedi-training {
-		  display: none;
+			visibility: hidden;
+		
 		}
 		
 		
@@ -75,7 +76,7 @@
 	 <script>
 		document.getElementById('show-quiz-link').addEventListener('click', function(event) {
 		  event.preventDefault();  // Empêche le lien de rediriger la page
-		  document.getElementById('jedi-training').style.display = 'block';  // Affiche le quiz
+		  document.getElementById('jedi-training').style.visibility = 'visible';  
 		});
 
 		function checkAnswer(answer) {

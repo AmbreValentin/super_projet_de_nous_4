@@ -7,42 +7,67 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        section {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
+            background-color: #f4f4f4;
             color: #333;
         }
-        p {
-            line-height: 1.6;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77d7c8 3px solid;
         }
-        li {
-            background-color: #ddd;
+        header h1 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .family {
+            margin-bottom: 40px;
+        }
+        .family h2 {
+            color: #333;
+        }
+        .character {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .character h3 {
+            color: #555;
             margin: 5px 0;
-            padding: 10px;
-            border-radius: 4px;
         }
-        img {
-            max-width: 100%;
+        .character p {
+            margin: 0;
+        }
+        .fan-note {
+            font-style: italic;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+        }
+        section img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 300px;
             height: auto;
+            border-radius: 8px;
+        }
+        .movie-poster {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
             border-radius: 8px;
             display: block;
             margin-left: auto;
@@ -53,50 +78,70 @@
 <body>
 
 <header>
-    <h1>Les Films Star Wars</h1>
+    <div class="container">
+        <h1>Les Films Star Wars</h1>
+    </div>
 </header>
 
 <section>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Star Wars Logo">
 </section>
 
-<section>
+<section class="main">
     <h2>Les Trilogies</h2>
     <ul>
         <li>
             <h3>Trilogie Originale</h3>
             <p>La trilogie originale comprend :</p>
             <ul>
-                <li><strong>Star Wars: Episode IV - Un nouvel espoir (1977)</strong><br>
-                    <em>Résumé :</em> Luke Skywalker, un jeune fermier, découvre un message caché dans un droïde. Ce message le conduit à rencontrer Obi-Wan Kenobi, qui lui révèle son destin de Jedi. Ensemble, ils doivent sauver la princesse Leia des griffes de l'Empire maléfique dirigé par Dark Vador.</li>
-                <li><strong>Star Wars: Episode V - L'Empire contre-attaque (1980)</strong><br>
-                    <em>Résumé :</em> L'Empire a pris sa revanche sur l'Alliance rebelle. Luke Skywalker s'entraîne avec Yoda pour devenir un Jedi, tandis que ses amis sont poursuivis par l'Empire. Le film se termine par une révélation choquante sur la véritable identité de Dark Vador.</li>
-                <li><strong>Star Wars: Episode VI - Le Retour du Jedi (1983)</strong><br>
-                    <em>Résumé :</em> Les rebelles lancent une attaque finale contre l'Empire. Luke affronte son père, Dark Vador, et l'Empereur Palpatine dans un duel épique, cherchant à ramener Vador du côté lumineux de la Force.</li>
+                <li>
+                    <strong>Star Wars: Episode IV - Un nouvel espoir (1977)</strong><br>
+                    <em>Résumé :</em> Luke Skywalker, un jeune fermier, découvre un message caché dans un droïde. Ce message le conduit à rencontrer Obi-Wan Kenobi, qui lui révèle son destin de Jedi. Ensemble, ils doivent sauver la princesse Leia des griffes de l'Empire maléfique dirigé par Dark Vador.<br>
+                </li>
+                <li>
+                    <strong>Star Wars: Episode V - L'Empire contre-attaque (1980)</strong><br>
+                    <em>Résumé :</em> L'Empire a pris sa revanche sur l'Alliance rebelle. Luke Skywalker s'entraîne avec Yoda pour devenir un Jedi, tandis que ses amis sont poursuivis par l'Empire. Le film se termine par une révélation choquante sur la véritable identité de Dark Vador.<br>
+                </li>
+                <li>
+                    <strong>Star Wars: Episode VI - Le Retour du Jedi (1983)</strong><br>
+                    <em>Résumé :</em> Les rebelles lancent une attaque finale contre l'Empire. Luke affronte son père, Dark Vador, et l'Empereur Palpatine dans un duel épique, cherchant à ramener Vador du côté lumineux de la Force.<br>
+                </li>
             </ul>
         </li>
         <li>
             <h3>Prélogie</h3>
             <p>La prélogie comprend :</p>
             <ul>
-                <li><strong>Star Wars: Episode I - La Menace fantôme (1999)</strong><br>
-                    <em>Résumé :</em> Deux Jedi, Qui-Gon Jinn et son apprenti Obi-Wan Kenobi, découvrent Anakin Skywalker, un garçon aux capacités exceptionnelles. Ils doivent protéger la reine Amidala et déjouer un complot mystérieux.</li>
-                <li><strong>Star Wars: Episode II - L'Attaque des clones (2002)</strong><br>
-                    <em>Résumé :</em> Dix ans après le premier film, la galaxie est en crise. Anakin Skywalker est maintenant un apprenti Jedi sous la tutelle d'Obi-Wan. Ils doivent protéger la sénatrice Padmé Amidala et découvrir la vérité derrière une armée de clones.</li>
-                <li><strong>Star Wars: Episode III - La Revanche des Sith (2005)</strong><br>
-                    <em>Résumé :</em> Anakin est séduit par le côté obscur de la Force et devient Dark Vador. L'Empire galactique est formé, et les Jedi sont presque exterminés. Le film montre la chute d'Anakin et la montée en puissance de l'Empire.</li>
+                <li>
+                    <strong>Star Wars: Episode I - La Menace fantôme (1999)</strong><br>
+                    <em>Résumé :</em> Deux Jedi, Qui-Gon Jinn et son apprenti Obi-Wan Kenobi, découvrent Anakin Skywalker, un garçon aux capacités exceptionnelles. Ils doivent protéger la reine Amidala et déjouer un complot mystérieux.<br>
+                </li>
+                <li>
+                    <strong>Star Wars: Episode II - L'Attaque des clones (2002)</strong><br>
+                    <em>Résumé :</em> Dix ans après le premier film, la galaxie est en crise. Anakin Skywalker est maintenant un apprenti Jedi sous la tutelle d'Obi-Wan. Ils doivent protéger la sénatrice Padmé Amidala et découvrir la vérité derrière une armée de clones.<br>
+                </li>
+                <li>
+                    <strong>Star Wars: Episode III - La Revanche des Sith (2005)</strong><br>
+                    <em>Résumé :</em> Anakin est séduit par le côté obscur de la Force et devient Dark Vador. L'Empire galactique est formé, et les Jedi sont presque exterminés. Le film montre la chute d'Anakin et la montée en puissance de l'Empire.<br>
+                </li>
             </ul>
         </li>
         <li>
             <h3>Trilogie Séquelle</h3>
             <p>La trilogie séquelle comprend :</p>
             <ul>
-                <li><strong>Star Wars: Episode VII - Le Réveil de la Force (2015)</strong><br>
-                    <em>Résumé :</em> Trente ans après la défaite de l'Empire, un nouveau mal émerge : le Premier Ordre. Une jeune scavenger, Rey, découvre ses pouvoirs et se joint à Finn et Han Solo pour chercher le dernier Jedi, Luke Skywalker.</li>
-                <li><strong>Star Wars: Episode VIII - Les Derniers Jedi (2017)</strong><br>
-                    <em>Résumé :</em> Rey trouve Luke Skywalker et cherche à comprendre son rôle dans la lutte contre le Premier Ordre. Pendant ce temps, l'Alliance rebelle subit de lourdes pertes et Kylo Ren poursuit sa quête de pouvoir.</li>
-                <li><strong>Star Wars: Episode IX - L'Ascension de Skywalker (2019)</strong><br>
-                    <em>Résumé :</em> La saga Skywalker atteint son apogée. Rey, avec l'aide de ses amis, affronte l'Empereur Palpatine revenu à la vie. Le film conclut l'histoire de la lutte entre les Jedi et les Sith, et le destin de Rey est révélé.</li>
+                <li>
+                    <strong>Star Wars: Episode VII - Le Réveil de la Force (2015)</strong><br>
+                    <em>Résumé :</em> Trente ans après la défaite de l'Empire, un nouveau mal émerge : le Premier Ordre. Une jeune scavenger, Rey, découvre ses pouvoirs et se joint à Finn et Han Solo pour chercher le dernier Jedi, Luke Skywalker.<br>
+                </li>
+                <li>
+                    <strong>Star Wars: Episode VIII - Les Derniers Jedi (2017)</strong><br>
+                    <em>Résumé :</em> Rey trouve Luke Skywalker et cherche à comprendre son rôle dans la lutte contre le Premier Ordre. Pendant ce temps, l'Alliance rebelle subit de lourdes pertes et Kylo Ren poursuit sa quête de pouvoir.<br>
+                </li>
+                <li>
+                    <strong>Star Wars: Episode IX - L'Ascension de Skywalker (2019)</strong><br>
+                    <em>Résumé :</em> La saga Skywalker atteint son apogée. Rey, avec l'aide de ses amis, affronte l'Empereur Palpatine revenu à la vie. Le film conclut l'histoire de la lutte entre les Jedi et les Sith, et le destin de Rey est révélé.<br>
+                </li>
             </ul>
         </li>
     </ul>

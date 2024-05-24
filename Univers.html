@@ -64,14 +64,61 @@
             height: auto;
         }
 		#jedi-training {
-		  visibility: hidden;
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0s, opacity 0.5s ease;
 		}
-		
-		
-		button {
-		  margin-top: 10px;
+		#jedi-training.visible {
+			visibility: visible;
+			opacity: 1;
+		}
+		.quiz-container {
+			background-color: #f9f9f9;
+			border-radius: 10px;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.quiz-container h2 {
+			color: #333;
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.quiz-question {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		.quiz-options {
+			display: flex;
+			justify-content: center;
+		}
+
+		.quiz-options button {
+			margin: 0 10px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border: none;
+			border-radius: 5px;
+			background-color: #333;
+			color: #fff;
+			transition: background-color 0.3s ease;
+		}
+
+		.quiz-options button:hover {
+			background-color: #555;
+		}
+
+		#quiz-score {
+			margin-top: 20px;
+			font-size: 20px;
+			font-weight: bold;
+		}
     </style>
-	
 </head>
 
 <header>
@@ -119,26 +166,57 @@
 	
 	</div>
 	
-	<div id="jedi-training">
-	  <h2>Formation Jedi</h2>
-	  <p>Quel est le nom du vaisseau de Han Solo ?</p>
-	  <button onclick="checkAnswer('correct')">Millennium Falcon</button>
-	  <button onclick="checkAnswer('wrong')">Star Destroyer</button>
-	  <button onclick="checkAnswer('wrong')">X-Wing</button>
+	<div id="jedi-training" class="quiz-container">
+		<h2>Formation Jedi</h2>
+		<div class="quiz-question">Quel est le nom du vaisseau de Han Solo ?</div>
+		<div class="quiz-options">
+			<button onclick="checkAnswer('correct')">Millennium Falcon</button>
+			<button onclick="checkAnswer('wrong')">Star Destroyer</button>
+			<button onclick="checkAnswer('wrong')">X-Wing</button>
+		</div>
+		<div class="quiz-question">Qui est le maître Jedi de Luke Skywalker dans "L'Empire contre-attaque" ?</div>
+		<div class="quiz-options">
+			<button onclick="checkAnswer('wrong')">Obi-Wan Kenobi</button>
+			<button onclick="checkAnswer('correct')">Yoda</button>
+			<button onclick="checkAnswer('wrong')">Mace Windu</button>
+		</div>
+		<div class="quiz-question">Comment s'appelle le droïde protocolaire doré de C-3PO ?</div>
+		<div class="quiz-options">
+			<button onclick="checkAnswer('correct')">TC-14</button>
+			<button onclick="checkAnswer('wrong')">R2-D2</button>
+			<button onclick="checkAnswer('wrong')">BB-8</button>
+		</div>
+		<div class="quiz-question">Qui a tué Jabba le Hutt dans "Le Retour du Jedi" ?</div>
+		<div class="quiz-options">
+			<button onclick="checkAnswer('wrong')">Luke Skywalker</button>
+			<button onclick="checkAnswer('wrong')">Han Solo</button>
+			<button onclick="checkAnswer('correct')">Princesse Leia</button>
+		</div>
+		<div id="quiz-score"></div>
 	</div>
 	
     <script>
+		var score = 0;
+
 		document.getElementById('show-quiz-link').addEventListener('click', function(event) {
-		  event.preventDefault();  // Empêche le lien de rediriger la page
-		  document.getElementById('jedi-training').style.visibility = 'visible';  // Affiche le quiz
+			event.preventDefault();
+			document.getElementById('jedi-training').classList.add('visible');
 		});
 
 		function checkAnswer(answer) {
-		  if (answer === 'correct') {
-			alert('Bonne réponse !');
-		  } else {
-			alert('Mauvaise réponse. Essayez encore.');
-		  }
+			if (answer === 'correct') {
+				score++;
+				alert('Bonne réponse !');
+			} else {
+				alert('Mauvaise réponse. Essayez encore.');
+			}
+
+			var scoreDisplay = document.getElementById('quiz-score');
+			scoreDisplay.textContent = 'Votre note : ' + score + ' / 5';
+
+			if (score === 5) {
+				alert("Que la Force soit avec toi, jeune padawan !");
+			}
 		}
 	</script>
 </body>

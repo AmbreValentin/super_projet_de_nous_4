@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Films Star Wars</title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            color: #fff; /* Couleur du texte */
+            line-height: 1.6;
+			background: url('https://cdn.wallpapersafari.com/81/68/6yKIJ1.jpg');
         }
         .container {
             width: 80%;
@@ -21,40 +22,60 @@
             padding-top: 30px;
             min-height: 70px;
             border-bottom: #77d7c8 3px solid;
+            text-align: center;
         }
         header h1 {
-            text-align: center;
             margin: 0;
             padding-bottom: 10px;
         }
         .main {
             padding: 20px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
             margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .family {
             margin-bottom: 40px;
+            background: #000 url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1600 900"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="50%" y1="0%" x2="50%" y2="100%"%3E%3Cstop stop-color="%23232c3b" offset="0%25" /%3E%3Cstop stop-color="%23101929" offset="100%25" /%3E%3C/linearGradient%3E%3C/filter%3E%3C/defs%3E%3Cg fill-opacity=".4" filter="url(%23f)"%3E%3Cpolygon points="957 450 679 688 763 899 1200 899 950 625 700 899 1180 899 957 450" fill="%23232c3b" /%3E%3Cpolygon points="520 155 452 203 426 146 365 180 377 241 320 218 345 278 279 269 320 330 272 336 308 380 260 384 320 420 295 447 350 461 314 498 344 488 380 518 381 500 415 540 420 503 452 534 464 485 502 500 469 528 494 509 539 540 522 500 558 530 534 565 574 552 584 593 610 560 619 617 660 595 678 631 704 605 719 648 757 618 761 664 785 629 798 679 846 643 854 690 883 657 899 700 899 700 0 200 0 200 899 520 899" fill="url(%23g)" /%3E%3C/g%3E%3C/svg%3E');
+            padding: 20px;
+            border-radius: 10px;
         }
         .family h2 {
-            color: #333;
+            color: #fff;
+            border-bottom: 2px solid #77d7c8;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
         .character {
-            margin-left: 20px;
-            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .character img {
+            width: 150px; /* Largeur fixe */
+            height: auto; /* Hauteur automatique pour conserver les proportions */
+            border-radius: 10px;
+            margin-right: 20px;
         }
         .character h3 {
-            color: #555;
-            margin: 5px 0;
+            color: #fff;
+            margin: 0 0 5px;
         }
         .character p {
             margin: 0;
+            color: #ddd; /* Couleur du texte pour les descriptions des personnages */
         }
         .fan-note {
             font-style: italic;
             color: #666;
             margin-top: 20px;
             text-align: center;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
         }
+
         section img {
             display: block;
             margin-left: auto;

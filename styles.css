@@ -45,7 +45,7 @@ nav a:hover {
 }
 
 .crawl {
-    font-family: 'SF Distant Galaxy', sans-serif; /* Utilisation de la police SF Distant Galaxy */
+    font-family: 'MyCustomFont', sans-serif; /* Utilisation de la police SF Distant Galaxy */
     text-align: justify;
     position: relative;
     top: 100px;

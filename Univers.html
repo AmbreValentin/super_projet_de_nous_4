@@ -54,6 +54,15 @@
             text-align: center;
         }
     </style>
+	<script>
+  function checkAnswer(answer) {
+    if (answer === 'correct') {
+      alert('Bonne réponse !');
+    } else {
+      alert('Mauvaise réponse. Essayez encore.');
+    }
+  }
+</script>
 
 <header>
 	<div class="container">
@@ -92,6 +101,16 @@
 			<div class="family">
 			L'univers de Star Wars est un hommage à la diversité et à l'imagination humaine. C'est un lieu où chaque élément, qu'il soit technologique, culturel ou naturel, tisse ensemble un récit épique d'aventure, de lutte et de découverte. Que la Force soit avec nous, pour continuer à explorer cette galaxie infinie.</p>
 	</div></div>
+	<div id="jedi-training">
+  <h2>Formation Jedi</h2>
+  <p>Quel est le nom du vaisseau de Han Solo ?</p>
+  <button onclick="checkAnswer('correct')">Millennium Falcon</button>
+  <button onclick="checkAnswer('wrong')">Star Destroyer</button>
+  <button onclick="checkAnswer('wrong')">X-Wing</button>
+</div>
+
+	
+	
 </body>
 
 </html>
